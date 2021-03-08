@@ -39,7 +39,10 @@ class AdminController extends Controller
     }
 
 
-
+    /**
+     * выводит форму login
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public function loginForm()
     {
         return view('auth.login', ['guard'=>'admin']);
