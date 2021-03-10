@@ -11,8 +11,8 @@
                 {{ session('status') }}
             </div>
         @endif
-
-        <form method="POST" action="{{ route('login') }}">
+{{--Проверим на админа и переключим путь ($guard - передает из контроллера "admin")--}}
+        <form method="POST" action="{{ isset($guard) ? url($guard.'/login') : route('login') }}">
             @csrf
 
             <div>
