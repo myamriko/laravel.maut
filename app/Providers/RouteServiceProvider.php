@@ -19,6 +19,17 @@ class RouteServiceProvider extends ServiceProvider
      */
     public const HOME = '/dashboard';
 
+
+    /**
+     * в редирект вставим $guard или админ или web-пользователь по умолчанию
+     * @param $guard
+     * @return string
+     */
+    public static function redirectTo($guard)
+    {
+        return $guard.'/dashboard';
+    }
+
     /**
      * The controller namespace for the application.
      *
